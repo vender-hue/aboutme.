@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ประวัติส่วนตัว | นางสาวสุภัทรา พัสมร</title>
+    <style>
+        :root {
+            --bg1: #fff7ed;
+            --bg2: #fdf2f8;
+            --bg3: #eff6ff;
+            --ink: #1f2937;
+            --muted: #6b7280;
+            --card: #ffffffcc;
+            --line: #e5e7eb;
+            --accent: #f97316;
+            --accent2: #8b5cf6;
+            --accent3: #06b6d4;
+            --shadow: 0 18px 45px rgba(31, 41, 55, .12);
+            --radius: 28px;
+        }
+
+        * {
+            box-sizing: border-box
+        }
+
+        html {
+            scroll-behavior: smooth
+        }
+
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Tahoma, sans-serif;
+            color: var(--ink);
+            background:
+                radial-gradient(circle at top left, rgba(249, 115, 22, .18), transparent 28%),
+                radial-gradient(circle at top right, rgba(139, 92, 246, .16), transparent 28%),
+                linear-gradient(135deg, var(--bg1), var(--bg2) 45%, var(--bg3));
+            min-height: 100vh;
+        }
+
+        .wrap {
+            width: min(1100px, calc(100% - 24px));
+            margin: 0 auto;
+            padding: 24px 0 40px;
+        }
+
+        .topnote {
+            display: flex;
+            justify-content: space-between;
+            gap: 14px;
+            flex-wrap: wrap;
+            align-items: center;
+            margin-bottom: 18px;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 16px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, .75);
+            border: 1px solid var(--line);
+            box-shadow: var(--shadow);
+            font-weight: 700;
+        }
+
+        .badge .dot {
+            width: 11px;
+            height: 11px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent), var(--accent2));
+            box-shadow: 0 0 0 6px rgba(249, 115, 22, .10);
+        }
+
+        .paper {
+            background: rgba(255, 255, 255, .72);
+            border: 1px solid rgba(255, 255, 255, .65);
+            border-radius: 34px;
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            backdrop-filter: blur(16px);
+        }
+
+        .hero {
+            padding: 28px 28px 20px;
+            border-bottom: 1px solid var(--line);
+            background:
+                linear-gradient(135deg, rgba(249, 115, 22, .10), rgba(139, 92, 246, .08), rgba(6, 182, 212, .06));
+        }
+
+        .hero-grid {
+            display: grid;
+            grid-template-columns: 220px 1fr;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .photo-frame {
+            width: 220px;
+            height: 220px;
+            border-radius: 30px;
+            background: linear-gradient(145deg, #fff, #ffe8d4 35%, #efe8ff 100%);
+            border: 1px solid rgba(31, 41, 55, .08);
+            box-shadow: 0 18px 40px rgba(31, 41, 55, .10);
+            display: grid;
+            place-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+
+
+
+        .avatar-icon {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #fed7aa, #fdba74 45%, #86efac);
+            position: relative;
+            box-shadow: inset 0 0 0 8px rgba(255, 255, 255, .55);
+        }
+
+        .avatar-icon::before {
+            content: "";
+            position: absolute;
+            top: 18px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: #fff7ed;
+            border: 4px solid #1f2937;
+        }
+
+        .avatar-icon::after {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: 16px;
+            transform: translateX(-50%);
+            width: 92px;
+            height: 56px;
+            border-radius: 36px 36px 16px 16px;
+            background: #34d399;
+            border: 4px solid #1f2937;
+            border-top: none;
+        }
+
+        .hero h1 {
+            margin: 0 0 10px;
+            font-size: clamp(2rem, 5vw, 4rem);
+            line-height: 1.05;
+            letter-spacing: -0.04em;
+        }
+
+        .hero p {
+            margin: 0;
+            color: var(--muted);
+            line-height: 1.9;
+            font-size: 1.03rem;
+            max-width: 700px;
+        }
+
+        .chips {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 18px;
+        }
+
+        .chip {
+            padding: 9px 14px;
+            border-radius: 999px;
+            background: #fff;
+            border: 1px solid var(--line);
+            font-size: 13px;
+            font-weight: 700;
+            color: #374151;
+        }
+
+        .content {
+            padding: 26px 28px 30px;
+            display: grid;
+            gap: 18px;
+        }
+
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin: 0 0 14px;
+        }
+
+        .section-title::before {
+            content: "";
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent), var(--accent2));
+            box-shadow: 0 0 0 7px rgba(249, 115, 22, .10);
+        }
+
+        .section-title h2 {
+            margin: 0;
+            font-size: 1.25rem;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 18px;
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--line);
+            border-radius: var(--radius);
+            box-shadow: 0 10px 26px rgba(31, 41, 55, .08);
+            padding: 20px;
+        }
+
+        .card h3 {
+            margin: 0 0 14px;
+            font-size: 1.08rem;
+        }
+
+        .list {
+            display: grid;
+            gap: 12px;
+        }
+
+        .item {
+            padding: 14px 16px;
+            border-radius: 18px;
+            background: #fff;
+            border: 1px solid var(--line);
+        }
+
+        .label {
+            display: block;
+            color: var(--muted);
+            font-size: 13px;
+            margin-bottom: 6px;
+            font-weight: 700;
+        }
+
+        .value {
+            font-weight: 700;
+            line-height: 1.7;
+        }
+
+        .table-wrap {
+            overflow: auto;
+            border-radius: 20px;
+            border: 1px solid var(--line);
+            background: #fff;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 700px;
+        }
+
+        th,
+        td {
+            border: 1px solid #d1d5db;
+            padding: 14px 12px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        th {
+            background: linear-gradient(135deg, rgba(249, 115, 22, .16), rgba(139, 92, 246, .14));
+            font-size: 15px;
+        }
+
+        tr:nth-child(even) td {
+            background: #fafafa
+        }
+
+        .footer-banner {
+            margin-top: 16px;
+            text-align: center;
+            padding: 22px;
+            border-radius: 24px;
+            background: linear-gradient(135deg, rgba(249, 115, 22, .18), rgba(139, 92, 246, .16), rgba(6, 182, 212, .14));
+            border: 1px solid rgba(31, 41, 55, .08);
+            font-size: clamp(2rem, 5vw, 4rem);
+            font-weight: 900;
+            letter-spacing: -0.04em;
+            color: #7c3aed;
+        }
+
+        .note {
+            margin-top: 8px;
+            color: var(--muted);
+            font-size: 13px;
+            text-align: center;
+        }
+
+        @media (max-width:900px) {
+
+            .hero-grid,
+            .cards {
+                grid-template-columns: 1fr
+            }
+
+            .photo-frame {
+                margin: auto
+            }
+
+            .hero {
+                text-align: center
+            }
+
+            .chips {
+                justify-content: center
+            }
+        }
+
+        @media (max-width:560px) {
+            .wrap {
+                width: min(100% - 16px, 1100px)
+            }
+
+            .paper,
+            .hero,
+            .content {
+                border-radius: 24px
+            }
+
+            .hero,
+            .content {
+                padding-left: 16px;
+                padding-right: 16px
+            }
+
+            .photo-frame {
+                width: 190px;
+                height: 190px
+            }
+
+            table {
+                min-width: 620px
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="topnote">
+            <div class="badge"><span class="dot"></span> ประวัติส่วนตัว / Portfolio</div>
+            <div class="badge">ธีม: Colorful Paper</div>
+        </div>
+
+        <div class="paper">
+            <section class="hero" id="top">
+                <div class="hero-grid">
+                    <div class="photo-frame" aria-label="รูปโปรไฟล์">
+                        <img src="S__44515361.jpg" alt="profile"
+                            style="width:100%;height:100%;object-fit:contain;background:white;border-radius:30px;">
+                    </div>
+
+                    <div>
+                        <h1>นางสาว สุภัทรา พัสมร</h1>
+                        <p>
+                            เว็บไซต์แนะนำตัวเองในรูปแบบเว็บประวัติส่วนตัว
+                        </p>
+                        <div class="chips">
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="content">
+                <div>
+                    <div class="section-title">
+                        <h2>ข้อมูลส่วนตัว</h2>
+                    </div>
+                    <div class="cards">
+                        <div class="card" id="about">
+                            <h3>ข้อมูลทั่วไป</h3>
+                            <div class="list">
+                                <div class="item">
+                                    <span class="label">ชื่อ-สกุล</span>
+                                    <div class="value">นางสาว สุภัทรา พัสมร</div>
+                                </div>
+                                <div class="item">
+                                    <span class="label">ที่อยู่</span>
+                                    <div class="value">197/267 ม.1 ตำบล สุรศักดิ์ อำเภอ ศรีราชา จังหวัดชลบุรี 20110
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card" id="contact">
+                            <h3>ช่องทางติดต่อ</h3>
+                            <div class="list">
+                                <div class="item">
+                                    <span class="label">เบอร์โทรศัพท์</span>
+                                    <div class="value">096-950-7407</div>
+                                </div>
+                                <div class="item">
+                                    <span class="label">Email</span>
+                                    <div class="value">Phatsamonsuphattra@gmail.com</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="education">
+                    <div class="section-title">
+                        <h2>ประวัติการศึกษา</h2>
+                    </div>
+                    <div class="card">
+                        <div class="table-wrap">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>ระดับ</th>
+                                        <th>สถานศึกษา</th>
+                                        <th>ปีที่จบการศึกษา</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>ประถมศึกษา</td>
+                                        <td>โรงเรียนเทศบาลวัดราษฎร์นิยมธรรม</td>
+                                        <td>2563</td>
+                                    </tr>
+                                    <tr>
+                                        <td>มัธยมศึกษา</td>
+                                        <td>เทศบาลบ้านศรีมหาราชา</td>
+                                        <td>2565</td>
+                                    </tr>
+                                    <tr>
+                                        <td>ปวช.</td>
+                                        <td>วิทยาลัยเทคโนโลยีชลบุรี</td>
+                                        <td>2568</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </div>
+</body>
+
+</html>
